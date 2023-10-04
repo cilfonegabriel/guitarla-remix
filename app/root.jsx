@@ -1,5 +1,6 @@
 import { Meta, Links, Outlet } from '@remix-run/react';
 import styles from './styles/index.css'
+import Header from './routes/components/header';
 
 export function meta() {
   return [
@@ -51,6 +52,7 @@ function Document({ children }) {
         <Meta />
         <Links />
       </head>
+      <Header />  
       <body>{children}</body>
     </html>
   );
