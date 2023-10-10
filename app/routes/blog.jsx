@@ -3,6 +3,14 @@ import { getPosts } from "../models/posts.server"
 import { useLoaderData } from "@remix-run/react"
 import styles from "../styles/blog.css"
 
+export function meta({data}) {
+  return [
+      {title: `GuitarLa - Our Blog`},
+      {description: `GuitarLA, Music and guitar sales blog`}
+  ];
+}
+
+
 export function links() {
   return[
     {
