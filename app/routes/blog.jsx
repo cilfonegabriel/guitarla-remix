@@ -1,6 +1,16 @@
 import Post from "../components/post"
 import { getPosts } from "../models/posts.server"
 import { useLoaderData } from "@remix-run/react"
+import styles from "../styles/blog.css"
+
+export function links() {
+  return[
+    {
+      rel: 'stylesheet',
+      href: styles
+    }
+  ]
+}
 
 export async function loader(){
   const posts = await getPosts()
