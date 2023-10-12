@@ -36,6 +36,7 @@ function Guitar() {
   const [amount, setAmount] = useState(0)
   const guitar = useLoaderData()
   const { name, description, imagen, price } = guitar.data[0].attributes
+
   const handleSubmit = e => {
     e.preventDefault();
 
