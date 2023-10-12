@@ -38,7 +38,19 @@ function Shopping() {
 
                       <div>
                         <p className='nombre'>{product.name}</p>
-                        <p>Amount: {product.amount}</p>
+                        <p>Amount:</p>
+
+                        <select 
+                          value={product.amount}
+                          className='select'
+                        >
+                          <option value="0">-- Select --</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
 
                         <p className='precio'>$ <span>{product.price}</span></p>
                         <p className='subtotal'>Subtotal: $ <span>{product.amount * product.price}</span></p>
