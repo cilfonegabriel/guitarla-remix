@@ -1,4 +1,4 @@
-import { useLoaderData } from "@remix-run/react"
+import { useLoaderData, useOutletContext } from "@remix-run/react"
 import { getGuitar } from "../models/guitars.server"
 import { useState } from "react"
 
@@ -33,9 +33,11 @@ export function meta({data}) {
 
 function Guitar() {
 
+  const {addCart} = useOutletContext()
   const [amount, setAmount] = useState(0)
   const guitar = useLoaderData()
   const { name, description, imagen, price } = guitar.data[0].attributes
+  
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -52,7 +54,7 @@ function Guitar() {
       price,
       amount
     }
-    console.log(selectedGuitar)
+    addCart(selectedGuitar)
   }
 
   return (

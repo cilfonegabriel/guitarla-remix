@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Meta, Links, Outlet, Scripts, LiveReload, useRouteError, isRouteErrorResponse, Link } from '@remix-run/react';
 import styles from './styles/index.css'
 import Header from './components/header';
@@ -39,12 +40,18 @@ export function links() {
 }
 
 export default function App() {
-  
+
+  const[cart,setCart] = useState([])
+
+  const addCart = guitar => {
+    setCart([...cart, guitar])
+  }
+
   return (
     <Document>
       <Outlet
         context={{
-
+          addCart
         }}
       />
     </Document>
