@@ -44,7 +44,7 @@ export default function App() {
   const[cart,setCart] = useState([])
 
   const addCart = guitar => {
-    if(cart.some(guitarState => guitarState.id === guitarState.id)) {
+    if(cart.some(guitarState => guitarState.id === guitar.id)) {
       //Iterate over the array and identify the duplicate element
       const updateCArt = cart.map(guitarState => {
         if(guitarState.id === guitar.id){
