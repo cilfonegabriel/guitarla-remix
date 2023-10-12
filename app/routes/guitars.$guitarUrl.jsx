@@ -42,6 +42,25 @@ function Guitar() {
         <h3>{name}</h3>
         <p className="texto">{description}</p>
         <p className="precio">${price}</p>
+        
+        <form className="formulario">
+          <label htmlFor="cantidad">Amount</label>
+
+          <select id="cantidad">
+            <option value="">-- Select --</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <input 
+            type = "submit"
+            value= "Add to cart"
+          />
+          
+        </form>
       </div>
     </div>
   )
