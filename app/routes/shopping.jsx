@@ -35,8 +35,8 @@ function Shopping() {
             <div className='carrito'>
                 <h2>Articles</h2>
 
-                {cart.length === 0 ? 'Empty cart' : (
-                  cart.map(product => (
+                {cart?.length === 0 ? 'Empty cart' : (
+                  cart?.map(product => (
                     <div key={product.id} className='producto'>
                       <div>
                         <img src={product.imagen} alt={`imagen of the product $ {product.name}`} />
@@ -67,7 +67,7 @@ function Shopping() {
                         <p className='subtotal'>Subtotal: $ <span>{product.amount * product.price}</span></p>
 
                       </div>
-                      
+
                       <button 
                         type='button'
                         className='btn_eliminar'
